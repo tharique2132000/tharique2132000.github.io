@@ -22,7 +22,9 @@ body {
     background-size: cover;
     background-position: center;
 }
-
+#welcome-text{
+    color:#fff;
+}
 .container {
     padding: 10px 10%;
 }
@@ -208,7 +210,7 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
-/* ----------------------------------portfolio--------------------------------- */
+/* ----------------------------------my work--------------------------------- */
 
 #portfolio {
     padding: 30px;
@@ -280,11 +282,14 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
+#portfolio a{
+    border: 1px solid #f68813;
+}
+
 .btn {
     display: block;
     padding: 15px 15px 15px 15px;
     margin: 50px auto;
-    width: fit-content;
     border: 1px solid #f68813;
     border-radius: 6px;
     text-decoration: none;
@@ -308,6 +313,11 @@ nav ul li a:hover::after {
 .contact-left p {
     margin-top: 30px;
 
+}
+
+.contact-left a{
+    margin-left: initial;
+    border-color: #f68813;
 }
 
 .contact-left p i {
@@ -334,13 +344,18 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-.btn.btn2 {
-    display: inline-block;
+.button {
+    width: max-content ;
+    /* display: inline-block; */
     background: #f68813;
+    
 }
 
 .contact-right form {
     width: 100%;
+}
+.contact-right textarea {
+    resize: none;
 }
 
 form input,
@@ -356,10 +371,11 @@ form textarea {
     border-radius: 6px;
 }
 
-form .btn2 {
+form .button {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
+    border-color: #f68813;
     cursor: pointer;
 }
 
@@ -417,26 +433,28 @@ form .btn2 {
 
 /* ---------------------------------------download cv button--------------------------------- */
 
-.btn2 {
-    --color: #00A97F;
+.button {
+    --color:#f68813;
     padding: 0.8em 1.7em;
+    margin-bottom: 50px;
     background-color: transparent;
     border-radius: .3em;
     position: relative;
     overflow: hidden;
+    border-color: var(--color) ;
     cursor: pointer;
     transition: .5s;
-    font-weight: 400;
-    font-size: 17px;
+    /* font-weight: 400;
+    font-size: 17px; */
     border: 1px solid;
-    font-family: inherit;
+    /* font-family: inherit; */
     text-transform: uppercase;
-    color: var(--color);
+    color: #fff;
     z-index: 1;
 }
 
-.btn2::before,
-.btn2::after {
+.button::before,
+.button::after {
     content: '';
     display: block;
     width: 50px;
@@ -449,27 +467,28 @@ form .btn2 {
     transition: 1s ease;
 }
 
-.btn2::before {
+.button::before {
     top: -1em;
     left: -1em;
 }
 
-.btn2::after {
+.button::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
 }
 
-.btn2:hover::before,
-.btn2:hover::after {
+.button:hover::before,
+.button:hover::after {
     height: 410px;
     width: 410px;
+    border-color: var(--color);
 }
 
-.btn2:hover {
+.button:hover {
     color: rgb(10, 25, 30);
 }
 
-.btn2:active {
+.button:active {
     filter: brightness(.8);
 }
 

@@ -11,3 +11,45 @@
             document.getElementById(tabname).classList.add("active-tab")
 
         }
+
+
+
+        // ---------------------------Loading text--------------------------
+
+                const initialText = "KGTYUFV";
+        const welcomeText = "RAHMAN";
+        const textElement = document.getElementById("welcome-text");
+        let loadedText = initialText;
+        let currentIndex = 0;
+
+        function loadRandomLetters() {
+            let randomLetters = "";
+            for (let i = 0; i < welcomeText.length; i++) {
+                randomLetters += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+            }
+            loadedText = randomLetters;
+            textElement.innerHTML = loadedText;
+            currentIndex = 0;
+            setTimeout(loadWelcomeText, 3);
+        }
+
+        function loadWelcomeText() {
+            if (loadedText[currentIndex] !== welcomeText[currentIndex]) {
+                let newLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+                loadedText = loadedText.substr(0, currentIndex) + newLetter + loadedText.substr(currentIndex + 1);
+                textElement.innerHTML = loadedText;
+                setTimeout(loadWelcomeText, 3);
+            } else {
+                currentIndex++;
+                if (currentIndex === welcomeText.length) {
+                    return;
+                }
+                setTimeout(loadWelcomeText, 3);
+            }
+        }
+
+        function startLoading() {
+            loadRandomLetters();
+        }
+
+        startLoading();
