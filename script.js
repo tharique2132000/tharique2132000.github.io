@@ -16,8 +16,9 @@
 
         // ---------------------------Loading text--------------------------
 
-                const initialText = "KGTYUFV";
-        const welcomeText = "RAHMAN";
+        const initialText = "KGTYUFVJE";
+        const welcomeText = "DEVELOPER";
+        // const welcomeText = document.getElementById("welcome-text");
         const textElement = document.getElementById("welcome-text");
         let loadedText = initialText;
         let currentIndex = 0;
@@ -52,4 +53,9 @@
             loadRandomLetters();
         }
 
-        startLoading();
+setInterval(() => {
+            startLoading();
+			loadText(target, finalText);
+		}, 4000); 
+
+        
