@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/482788d63b.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 
 </head>
 
@@ -148,55 +150,136 @@
                     <a href="#">Learn more</a>
                 </div>
             </div>
-            <div class="services-list">
-                <div>
-                    <!-- <script src="https://cdn.lordicon.com/ritcuqlt.js"></script> -->
-                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                    <lord-icon class="lordicons" src="https://cdn.lordicon.com/dtgezzsi.json" trigger="loop"
-                        colors="primary:#ffffff,secondary:#ffffff" style="width:50px;height:50px" delay="2000" scale="60">
-                    </lord-icon>
-                    <!-- <i class="fa-solid fa-code"></i> -->
-                    <h2>Product Design</h2>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae, esse voluptatum saepe optio
-                        eius accusamus cupiditate! Dolor iusto fugiat illo voluptatem, possimus harum nesciunt, quis ex
-                        eligendi, sequi doloribus!</p>
-                    <br>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <!-- <i class="fa-solid fa-crop-simple"></i> -->
-                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                    <lord-icon class="lordicons" src="https://cdn.lordicon.com/ivhjpjsw.json" trigger="loop" delay="2000"
-                        colors="primary:#ffffff,secondary:#ffffff" scale="50" style="width:50px;height:50px">
-                    </lord-icon>
-                    <h2>Mobile Application</h2>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae, esse voluptatum saepe optio
-                        eius accusamus
-                        cupiditate! Dolor iusto fugiat illo voluptatem, possimus harum nesciunt, quis ex eligendi, sequi
-                        doloribus!</p>
-                    <br>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <!-- <i class="fa-solid fa-ghost"></i> -->
-                    <!-- <script src="https://cdn.lordicon.com/ritcuqlt.js"></script> -->
-                    <lord-icon class="lordicons" src="https://cdn.lordicon.com/brtridhw.json" trigger="loop" delay="2000"
-                        colors="primary:#ffffff,secondary:#ffffff" style="width:50px;height:50px">
-                    </lord-icon>
-                    <h2>Web Application</h2>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae, esse voluptatum saepe optio
-                        eius accusamus
-                        cupiditate! Dolor iusto fugiat illo voluptatem, possimus harum nesciunt, quis ex eligendi, sequi
-                        doloribus!</p>
-                    <br>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
+
         </div>
     </div>
+<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
+<!-- ----------------------Technologies worked with------------------------ -->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">Technologies</h1>
+        <div class="wrapper">
+            <div class="card">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">HTML & CSS</div>
+            </div>
+            <div class="card js">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">JavaScript</div>
+            </div>
+
+            <div class="card java">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Java & Spring Boot</div>
+            </div>
+            <div class="card react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">React JS</div>
+            </div>
+
+            <div class="card angular">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Angular JS</div>
+            </div>
+
+        </div>
+        <div class="wrapper">
+            <div class="card flutter">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Flutter</div>
+            </div>
+            <div class="card wordpress">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">WordPress</div>
+            </div>
+        
+            <div class="card git">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Git</div>
+            </div>
+            <div class="card tailwind">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Tailwind</div>
+            </div>
+        
+            <div class="card python">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                </div>
+                <div class="text">Python</div>
+            </div>
+        
+        </div>
+        <script>
+            let options = {
+                startAngle: -1.55,
+                size: 150,
+                value: 0.85,
+                fill: { gradient: ['#f68813', '#f68813'] }
+            }
+            $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+                function (event, progress, stepValue) {
+                    $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+                });
+            $(".js .bar").circleProgress({
+                value: 0.70
+            });
+            $(".react .bar").circleProgress({
+                value: 0.65
+            });
+            $(".angular .bar").circleProgress({
+                value: 0.75
+            });
+            $(".flutter .bar").circleProgress({
+                value: 0.55
+            });
+                $(".wordpress .bar").circleProgress({
+                    value: 0.60
+                });
+                $(".git .bar").circleProgress({
+                    value: 0.90
+                });
+                $(".tailwind .bar").circleProgress({
+                    value: 0.75
+                });
+                $(".python .bar").circleProgress({
+                    value: 0.65
+                });
+                $(".java .bar").circleProgress({
+                    value: 0.80
+                });
+        </script>
+    </div>
+</div>
 <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <!-- ---------------------------------------portfolio------------------------------------->
 <div id="portfolio">

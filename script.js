@@ -55,10 +55,35 @@ function opentab(tabname) {
 // 			loadText(target, finalText);
 // }, 4000);
 
-// ---------------------------------------------------------------new typing animaation-----------------------------
+// ---------------------------------------------------------------new typing animation-----------------------------
 var typed = new Typed(" .welcome-text", {
   strings: ["Full Stack Developer.", "Content Creator.", "Designer."],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
 });
+
+// ----------------------------------------new skill page----------------------------------------------
+// let options = {
+//   startAngle: -1.55,
+//   size: 150,
+//   value: 0.85,
+//   fill: { gradient: ["#f68813", "#f68813"] },
+// };
+// $(".circle .bar")
+//   .circleProgress(options)
+//   .on("circle-animation-progress", function (event, progress, stepValue) {
+//     $(this)
+//       .parent()
+//       .find("span")
+//       .text(String(stepValue.toFixed(2).substr(2)) + "%");
+//   });
+// $(".js .bar").circleProgress({
+//   value: 0.6,
+// });
+// $(".node .bar").circleProgress({
+//   value: 0.9,
+// });
+// $(".react .bar").circleProgress({
+//   value: 0.6,
+// });
